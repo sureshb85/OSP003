@@ -3,7 +3,6 @@ package selenium.basics;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,7 +19,7 @@ public class FacebookLogin {
 
 		// click on create new account button
 		driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']")).click();
-		
+
 		// org.openqa.selenium.NoSuchElementException
 		// or incorrect xpath ------------------
 		// //a[@data-testid='open-regiion-form-button']
