@@ -1,35 +1,29 @@
-package selenium.basics.locators;
+package selenium.basics.waits;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.pagefactory.ByAll;
 
-public class OtherLocator_ByAll {
+import selenium.basics.DriverSetup;
+
+public class ImplicitExample {
 	public static void main(String[] args) {
 
-		// ByAll,
-		// ByChained,
-		// ByIdOrName
-
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = DriverSetup.getWebDriver();
 		driver.get("https://www.wikipedia.org");
-		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
-		// ByAll
-		//new ByAll(By.xpath(""), By.cssSelector(""), By.name(""));
-		
-		/* 1
-		 * 2
-		 * 3
-		 * 4
-		 * 5
-		 * 6
-		 * then implicitwait will throw error
-		 */
+
+		// Exception in thread "main"
+		// org.openqa.selenium.NoSuchElementException: Cannot locate an element
+		// using By.all({By.xpath: //input[@id='searchInputttttt'],By.id:
+		// searchInputtttttt,By.cssSelector: #searchInputtttt})
+		// WebElement wikiSearch = driver.findElement(new
+		// ByAll(By.xpath("//input[@id='searchInputttttt']"),
+		// By.id("searchInputtttttt"), By.cssSelector("#searchInputtttt")));
+
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		WebElement wikiSearch = driver.findElement(new ByAll(By.xpath("//input[@id='searchInputttttt']"),
 				By.id("searchInputtttttt"), By.cssSelector("#searchInput")));
 		wikiSearch.sendKeys("selenium java testng");
