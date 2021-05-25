@@ -12,7 +12,7 @@ public class WebElement_Dropdwon {
 	public static void main(String[] args) {
 
 		withoutSelectClass();
-		withSelectClass();
+		//withSelectClass();
 	}
 
 	private static void withSelectClass() {
@@ -25,7 +25,8 @@ public class WebElement_Dropdwon {
 
 		System.out.println(selectLanguage.getFirstSelectedOption().getText());
 		selectLanguage.selectByValue("pl");
-		selectLanguage.selectByValue("EN");
+		System.out.println(selectLanguage.getFirstSelectedOption().getText());
+		selectLanguage.selectByValue("en");
 
 		// getOptions
 		List<WebElement> allOptions = selectLanguage.getOptions();
