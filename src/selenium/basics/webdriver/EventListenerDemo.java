@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class EventListenerDemo implements WebDriverEventListener {
-
 	@Override
 	public void afterAlertAccept(WebDriver arg0) {
 		// TODO Auto-generated method stub
@@ -29,7 +28,8 @@ public class EventListenerDemo implements WebDriverEventListener {
 	@Override
 	public void afterClickOn(WebElement arg0, WebDriver arg1) {
 		System.out.println("After click, Title is " + arg1.getTitle());
-
+		// code to wait until the page is loaded
+		// some logic related to the project
 	}
 
 	@Override

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import selenium.basics.DriverSetup;
 
-public class EventListenerUsgaeDemo extends EventListenerDemo {
+public class EventListenerUsgaeDemo  extends EventListenerDemo {
 
 	public static void main(String[] args) {
 		
@@ -31,7 +31,7 @@ public class EventListenerUsgaeDemo extends EventListenerDemo {
 		System.out.println("print textcontent " + text);
 
 		eventFiring.findElement(By.xpath("//*[@id=\"search-form\"]/fieldset/button/i")).click();
-
+	
 		eventFiring.quit();
 	}
 
