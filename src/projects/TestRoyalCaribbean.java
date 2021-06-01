@@ -17,8 +17,8 @@ import selenium.basics.DriverSetup;
 
 public class TestRoyalCaribbean {
 	public static void main(String[] args) {
-		Duration d = Duration.ofSeconds(30);
-		Duration p = Duration.ofSeconds(2);
+		Duration d = Duration.ofSeconds(45);
+		Duration p = Duration.ofSeconds(4);
 		WebDriver driver = DriverSetup.getWebDriver();
 
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(d).pollingEvery(p)
